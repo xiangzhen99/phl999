@@ -3,16 +3,16 @@ st.set_page_config(page_title='音乐歌单',page_icon='🐈')
 music= [{'url':"https://music.163.com/song/media/outer/url?id=461811019.mp3",
            'photo':'https://p2.music.126.net/RzeeuhXoVhvrSgRkkF9vig==/18734578627494886.jpg?param=330y280',
            'name':'歌名:屋顶 歌手👨‍🎤:周杰伦 时长⏰︎:2:32'},
-          {'url': "https://music.163.com/song/media/outer/url?id=2736682437.mp3",
+          {'url': "https://music.163.com/song/media/outer/url?id=1391891631.mp3",
            'photo':'https://p1.music.126.net/SvT-8cEpiT0UrlEKzqmSJA==/109951171874589305.jpg?param=330y280',
-           'name':'歌名:i like u like 歌手👨‍🎤:时代少年团 时长⏰︎:3:05'},
-          {'url':"https://music.163.com/song/media/outer/url?id=1330348068.mp3",
-           'photo':'https://p2.music.126.net/diGAyEmpymX8G7JcnElncQ==/109951163699673355.jpg?param=330y280',
-           'name':'歌名:起风了 歌手👨‍🎤:买辣椒也用券 时长⏰︎:5:25'}
+           'name':'歌名:嗜好 歌手👨‍🎤:颜人中 时长⏰︎:4:44'},
+          {'url':"https://music.163.com/song/media/outer/url?id=1359356908.mp3",
+           'photo':'https://p1.music.126.net/8DkTnzi7jdjWGYl4qbwLCg==/109951164517295956.jpg?param=330y280',
+           'name':'歌名:晚安 歌手👨‍🎤:颜人中 时长⏰︎:4:49'}
           ]
 import streamlit as st
 import random
-st.subheader("🫶音乐歌单")
+st.subheader("🎶音乐歌单")
 if'ind' not in st.session_state:
     st.session_state['ind']=0
     
@@ -26,7 +26,7 @@ def prevIMG():
 def randomIMG():
     st.session_state['ind']=random.randint(0, len(music)-1)
 
-col_cover, col_info = st.columns([1, 2])  
+col_cover, col_info = st.columns([1, 1])
 with col_cover:
     st.image(
         music[st.session_state['ind']]['photo'],
